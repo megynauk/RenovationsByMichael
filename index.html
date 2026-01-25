@@ -14,6 +14,11 @@
 
   <link rel="stylesheet" href="styles.css">
   <script defer src="main.js"></script>
+
+  <!-- Page-specific hero override to guarantee the photo shows -->
+  <style>
+    .hero-img { content: none; }
+  </style>
 </head>
 
 <body class="site-body">
@@ -40,3 +45,141 @@
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z" fill="currentColor"/>
           </svg>
+        </a>
+
+        <a class="nav-icon" href="#" aria-label="Enter a testimonial (add link)">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4h16v12H7l-3 3V4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M8 8h8M8 11h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+
+        <span class="nav-star" aria-hidden="true" title="Accent">
+          <img src="images/star.png" alt="">
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-media" aria-hidden="true">
+        <!-- Use the real reno photo -->
+        <img class="hero-img" src="images/house.png" alt="">
+        <div class="hero-gradient"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-box">
+          <div class="hero-eyebrow">Veteran • Family Owned • Quality Craftsmanship</div>
+          <h1>RENOVATIONS BY MICHAEL</h1>
+          <p>Veteran and family owned with over 20 years of experience.</p>
+
+          <div class="btn-row">
+            <a class="btn btn-white" href="about.html">About Us</a>
+            <a class="btn btn-red" href="contact.html#estimate">Request an Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT BLURB -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="kicker">About</div>
+          <h2>High-end results, down-to-earth process.</h2>
+          <p class="small">Clear quotes, quality craftsmanship, clean job sites, and reliable communication.</p>
+        </div>
+        <a class="btn btn-red" href="about.html">Learn More</a>
+      </div>
+
+      <div class="grid">
+        <div class="card span-8">
+          <p>
+            We bring decades of hands-on renovation experience to every project — from planning to finish work.
+            Our goal is simple: do it right, communicate clearly, and leave your home better than we found it.
+          </p>
+          <p class="small">Replace this with your real story as you’re ready.</p>
+        </div>
+
+        <div class="card span-4">
+          <div class="kicker">Highlights</div>
+          <ul class="list">
+            <li>Over 20 years experience</li>
+            <li>Clean, respectful job sites</li>
+            <li>Clear timelines & expectations</li>
+          </ul>
+          <a class="btn btn-white" href="gallery.html">View Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Services</div>
+          <h2>Popular services</h2>
+          <p class="small">A quick overview — visit Services for the full list.</p>
+        </div>
+        <a class="btn btn-white" href="services.html">All Services</a>
+      </div>
+
+      <div class="grid">
+        <div class="card span-4 service-card">
+          <img src="images/basements.png" alt="Basements">
+          <h3>Basements</h3>
+          <p class="small">Finishing, drywall, flooring, trim, and more.</p>
+          <a class="btn btn-red" href="contact.html#estimate">Estimate</a>
+        </div>
+
+        <div class="card span-4 service-card">
+          <img src="images/bathroom.png" alt="Bathrooms">
+          <h3>Bathrooms</h3>
+          <p class="small">Tile, vanities, fixtures, waterproofing.</p>
+          <a class="btn btn-white" href="contact.html#estimate">Estimate</a>
+        </div>
+
+        <div class="card span-4 service-card">
+          <img src="images/windowdoor.png" alt="Windows and doors">
+          <h3>Windows & Doors</h3>
+          <p class="small">Replacement and upgrades with clean finishing.</p>
+          <a class="btn btn-red" href="contact.html#estimate">Estimate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="card cta">
+        <div>
+          <div class="kicker">Next step</div>
+          <h2>Ready to talk about your project?</h2>
+          <p class="small">We can add booking + PayPal later when you’re ready.</p>
+        </div>
+        <div class="btn-row" style="margin:0;">
+          <a class="btn btn-red" href="contact.html#estimate">Request an Estimate</a>
+          <a class="btn btn-white" href="gallery.html">See Our Work</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <img class="footer-logo" src="images/typo.png" alt="Renovations by Michael">
+      <p class="small">© <span id="year"></span> Renovations by Michael • Delaware &amp; Pennsylvania</p>
+    </footer>
+  </main>
+
+  <button class="to-top" aria-label="Return to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5l7 7-2 2-5-5-5 5-2-2z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
