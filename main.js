@@ -1,45 +1,66 @@
 (function () {
-  const nav = document.querySelector(".nav");
-  const toggle = document.querySelector(".nav-toggle");
+  // Back to top
+  const toTop = document.querySelector(".to-top");
+  if (toTop) {
+    const onScroll = () => {
+      if (window.scrollY > 500) toTop.classList.add("show");
+      else toTop.classList.remove("show");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
 
   // Mobile nav
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", nav.classList.contains("open") ? "true" : "false");
+      nav.classList.toggle("mobile-open");
+      toggle.setAttribute("aria-expanded", nav.classList.contains("mobile-open") ? "true" : "false");
     });
 
-    // Close menu on link click
-    nav.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => nav.classList.remove("open"));
+    document.addEventListener("click", (e) => {
+      if (!nav.classList.contains("mobile-open")) return;
+      if (nav.contains(e.target) || toggle.contains(e.target)) return;
+      nav.classList.remove("mobile-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+
+    nav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        nav.classList.remove("mobile-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
-  // Active link highlight
-  const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  document.querySelectorAll(".nav a").forEach((a) => {
-    const href = (a.getAttribute("href") || "").toLowerCase();
-    if (href === path) a.classList.add("active");
+  // Active nav link
+  const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  document.querySelectorAll(".nav a[data-page]").forEach((a) => {
+    if ((a.getAttribute("data-page") || "").toLowerCase() === current) {
+      a.setAttribute("aria-current", "page");
+    }
   });
 
-  // Contact form mailto helper (static-safe)
-  const form = document.querySelector("[data-mailto-form]");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = form.querySelector("[name='name']")?.value?.trim() || "";
-      const email = form.querySelector("[name='email']")?.value?.trim() || "";
-      const message = form.querySelector("[name='message']")?.value?.trim() || "";
+  // Simple lightbox for gallery
+  const lightbox = document.querySelector(".lightbox");
+  if (lightbox) {
+    const img = lightbox.querySelector("img");
+    const closeBtn = lightbox.querySelector(".lightbox-close");
 
-      // TODO: put the real email here:
-      const to = "renovationsbymichael@example.com";
-
-      const subject = encodeURIComponent(`Website Inquiry - ${name || "New Lead"}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
-      );
-
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    document.querySelectorAll(".gallery-grid a").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const href = link.getAttribute("href");
+        img.src = href;
+        lightbox.classList.add("open");
+      });
     });
+
+    const close = () => lightbox.classList.remove("open");
+    closeBtn?.addEventListener("click", close);
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
 })();

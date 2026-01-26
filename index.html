@@ -2,279 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Renovations By Michael | Full-Service Contractor (PA & DE)</title>
-  <meta name="description" content="Family-owned, full-service contracting in Pennsylvania & Delaware. Decks, additions, basements, bathrooms, windows/doors, finishing work, and more." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Renovations by Michael</title>
+
+  <link rel="icon" type="image/png" href="images/RM.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;600;800;900&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="images/roofline.png" alt="Renovations by Michael">
+      </a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Renovations By Michael Home">
-      <img class="brand-logo" src="images/roofline.png" alt="Renovations By Michael logo" />
-      <span class="brand-sub">
-        <span class="brand-name">Renovations By Michael</span>
-        <span class="brand-tagline">One trustworthy team • Start to finish</span>
-      </span>
-    </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
 
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="header-right">
-      <div class="star-badge" title="Quality work. Trusted team.">
-        <img class="star-img" src="images/star.png" alt="Star badge" />
-        <strong>Trusted</strong>
-      </div>
-
-      <div class="social" aria-label="Social links">
-        <!-- Replace # with real links -->
-        <a href="#" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.3V12h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12z"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm6.2-2.6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-          </svg>
-        </a>
-      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="about.html" data-page="about.html">About</a>
+        <a href="services.html" data-page="services.html">Services</a>
+        <a href="gallery.html" data-page="gallery.html">Gallery</a>
+        <a href="testimonials.html" data-page="testimonials.html">Testimonials</a>
+        <a href="contact.html" data-page="contact.html">Contact</a>
+        <span class="nav-star" aria-hidden="true"><img src="images/star.png" alt=""></span>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-
-  <!-- HERO -->
-  <section class="section section--tight">
-    <div class="container">
-      <div class="hero">
-        <div class="hero-media">
-          <!-- hero background: pick your strongest “real” image -->
-          <img src="images/enclosure.png" alt="Renovation project photo" />
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <div class="kicker">Pennsylvania & Delaware</div>
-          <h1>Clean, reliable renovations—done right.</h1>
-          <p>
-            We’re a family-owned, full-service contractor team with 20+ years of experience.
-            One crew. Clear communication. First-class work—from start to finish.
-          </p>
-
-          <div class="hero-badges">
-            <span class="pill">Decks & Additions</span>
-            <span class="pill">Basements & Bathrooms</span>
-            <span class="pill">Windows & Doors</span>
-            <span class="pill">Finish Work</span>
-          </div>
-
-          <div class="btn-row">
-            <a class="btn btn--red" href="contact.html">Request a Quote</a>
-            <a class="btn btn--blue" href="gallery.html">View Our Work</a>
-            <a class="btn btn--ghost" href="services.html">Explore Services</a>
-          </div>
+  <main class="page-col">
+    <!-- Hero: minimal, squared, gradient -->
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('images/enclosure.png');"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <h1>RENOVATIONS BY MICHAEL</h1>
+        <p>Veteran and family owned with over 20 years of experience.</p>
+        <div class="btn-row">
+          <a class="btn btn-blue" href="services.html">View Services</a>
+          <a class="btn btn-red" href="contact.html#estimate">Request an Estimate</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FEATURED WORK (REAL PHOTOS) -->
-  <section class="section">
-    <div class="container">
-      <div class="kicker">Featured Work</div>
-      <h2 class="h2">Projects that show the details</h2>
-      <p class="lede">
-        We focus on clean lines, solid build quality, and finishes that look intentional—not rushed.
-      </p>
-
-      <div style="height:18px;"></div>
-
-      <!-- Batch 1 -->
-      <div class="card">
-        <div class="pair">
-          <div class="media"><img src="images/enclosure.png" alt="Exterior renovation project" /></div>
-          <div class="media"><img src="images/baywindow.png" alt="Bay window / enclosure detail" /></div>
+    <!-- About teaser -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="kicker">About</div>
+          <h2>Quality workmanship, clear communication.</h2>
+          <p class="small">One reliable team — clean job sites, thoughtful planning, and strong finish work.</p>
         </div>
-        <div class="caption">Custom enclosure / exterior integration + detail work.</div>
+        <a class="btn btn-blue" href="about.html">About Us</a>
       </div>
 
-      <div style="height:16px;"></div>
-
-      <!-- Batch 2 -->
-      <div class="card">
-        <div class="pair">
-          <div class="media"><img src="images/deck.png" alt="Deck project wide shot" /></div>
-          <div class="media"><img src="images/doorandoverhang.png" alt="Door and overhang project detail" /></div>
-        </div>
-        <div class="caption">Deck builds + exterior improvements (doors, overhangs, and more).</div>
-      </div>
-
-      <div class="btn-row" style="margin-top:18px;">
-        <a class="btn btn--blue" href="gallery.html">See Full Gallery</a>
-        <a class="btn btn--red" href="contact.html">Get a Quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <div class="kicker">What We Do</div>
-      <h2 class="h2">Full-service contracting</h2>
-      <p class="lede">
-        From a single room to an entire addition—we can handle every aspect of the project without
-        multiple crews coming in and out of your home.
-      </p>
-
-      <div style="height:18px;"></div>
-
-      <div class="grid grid--4">
-        <a class="card" href="services.html#additions">
-          <div class="media icon-media"><img src="images/addition.png" alt="Addition icon" /></div>
-          <div class="card-pad">
-            <h3>Additions</h3>
-            <p>Build-outs, expansions, and planning support.</p>
-          </div>
-        </a>
-
-        <a class="card" href="services.html#decks">
-          <div class="media icon-media"><img src="images/decks.png" alt="Deck icon" /></div>
-          <div class="card-pad">
-            <h3>Decks</h3>
-            <p>New decks, repairs, and upgrades.</p>
-          </div>
-        </a>
-
-        <a class="card" href="services.html#basements">
-          <div class="media icon-media"><img src="images/basements.png" alt="Basement icon" /></div>
-          <div class="card-pad">
-            <h3>Basements</h3>
-            <p>Finished spaces that feel like home.</p>
-          </div>
-        </a>
-
-        <a class="card" href="services.html#bathrooms">
-          <div class="media icon-media"><img src="images/bathroom.png" alt="Bathroom icon" /></div>
-          <div class="card-pad">
-            <h3>Bathrooms</h3>
-            <p>Refreshes to full remodels.</p>
-          </div>
-        </a>
-
-        <a class="card" href="services.html#windows-doors">
-          <div class="media icon-media"><img src="images/windowdoor.png" alt="Windows and doors icon" /></div>
-          <div class="card-pad">
+      <div class="grid">
+        <!-- small informative cards, not a gallery dump -->
+        <div class="card span-4">
+          <div class="card-media"><img src="images/baywindow.png" alt="Window project"></div>
+          <div class="card-body">
             <h3>Windows & Doors</h3>
-            <p>Replacements, trim, and exterior finish work.</p>
+            <p>Replacement, trim, flashing, and clean exterior integration — done the right way.</p>
+            <a class="btn btn-red" href="services.html#windows">See Details</a>
           </div>
-        </a>
-
-        <a class="card" href="services.html#flooring">
-          <div class="media icon-media"><img src="images/flooring.png" alt="Flooring icon" /></div>
-          <div class="card-pad">
-            <h3>Flooring</h3>
-            <p>Laminate and more—installed cleanly.</p>
-          </div>
-        </a>
-
-        <a class="card" href="services.html#finishing">
-          <div class="media icon-media"><img src="images/finishing.png" alt="Finishing icon" /></div>
-          <div class="card-pad">
-            <h3>Finish Work</h3>
-            <p>Drywall, trim, and the final details.</p>
-          </div>
-        </a>
-
-        <a class="card" href="services.html#sheds">
-          <div class="media icon-media"><img src="images/shed.png" alt="Shed icon" /></div>
-          <div class="card-pad">
-            <h3>Sheds</h3>
-            <p>Outdoor structures and storage solutions.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <div class="kicker">Testimonials</div>
-      <h2 class="h2">People remember the details</h2>
-
-      <div style="height:18px;"></div>
-
-      <div class="grid grid--3">
-        <div class="card card-pad quote">
-          <p>“Nice clean work, dedicated to satisfy. He's definitely the guy to call.”</p>
-          <div class="who">— Customer</div>
         </div>
 
-        <div class="card card-pad quote">
-          <p>“Awesome work and great people!! Highly recommended.”</p>
-          <div class="who">— Customer</div>
+        <div class="card span-4">
+          <div class="card-media"><img src="images/deck.png" alt="Deck project"></div>
+          <div class="card-body">
+            <h3>Decks & Outdoor</h3>
+            <p>New builds, repairs, framing, and upgrades that last — built with care.</p>
+            <a class="btn btn-blue" href="services.html#decks">See Details</a>
+          </div>
         </div>
 
-        <div class="card card-pad quote">
-          <p>“We have worked with Mike and his team for several years now… one trustworthy team doing first class work.”</p>
-          <div class="who">— Repeat Client</div>
+        <div class="card span-4">
+          <div class="card-media"><img src="images/doorandoverhang.png" alt="Door and overhang"></div>
+          <div class="card-body">
+            <h3>Enclosures & Additions</h3>
+            <p>Improve flow and function with thoughtful planning and durable construction.</p>
+            <a class="btn btn-red" href="gallery.html">View Work</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="btn-row">
-        <a class="btn btn--blue" href="testimonials.html">Read More Testimonials</a>
-        <a class="btn btn--red" href="contact.html">Request a Quote</a>
+    <!-- Testimonials snippets -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Testimonials</div>
+          <h2>Clients notice the difference.</h2>
+          <p class="small">A few highlights — read the full page for more.</p>
+        </div>
+        <a class="btn btn-blue" href="testimonials.html">All Testimonials</a>
       </div>
-    </div>
-  </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="images/typo.png" alt="Renovations By Michael wordmark" />
-      <div class="footer-note">
-        Family-owned, full-service contracting in PA & DE. One team. Clear communication. Clean, reliable work.
+      <div class="grid">
+        <div class="card span-6">
+          <div class="card-body">
+            <p class="quote">“Nice clean work, dedicated to satisfy. He’s definitely the guy to call.”</p>
+            <div class="cite">— Client</div>
+          </div>
+        </div>
+        <div class="card span-6">
+          <div class="card-body">
+            <p class="quote">“Awesome work and great people!! Highly recommended.”</p>
+            <div class="cite">— Client</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div>
-      <div class="footer-title">Quick Links</div>
-      <div class="footer-links">
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+    <!-- Footer (polished) -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/typo.png" alt="Renovations by Michael">
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook (add link)">Facebook</a>
+        </div>
+
+        <div class="footer-meta">© <span id="year"></span> Renovations by Michael • Delaware &amp; Pennsylvania</div>
       </div>
-    </div>
+    </footer>
+  </main>
 
-    <div>
-      <div class="footer-title">Get Started</div>
-      <div class="footer-links">
-        <!-- Replace placeholders -->
-        <a href="contact.html">Request a Quote</a>
-        <a href="tel:+1">Call: (###) ###-####</a>
-        <a href="mailto:renovationsbymichael@example.com">Email: renovationsbymichael@example.com</a>
-      </div>
-    </div>
-  </div>
-</footer>
+  <button class="to-top" aria-label="Back to top">↑</button>
 
-<script src="main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
