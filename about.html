@@ -2,110 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About • Renovations by Michael</title>
-
-  <link rel="icon" type="image/png" href="images/lettermark.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;600;800;900&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Renovations By Michael</title>
+  <meta name="description" content="Family-owned, full-service contracting with 20+ years of experience serving Pennsylvania and Delaware." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
 
-<body class="site-body">
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <img class="brand-logo" src="images/roofline.png" alt="Renovations by Michael">
-      </a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="images/roofline.png" alt="Renovations By Michael logo" />
+      <span class="brand-sub">
+        <span class="brand-name">Renovations By Michael</span>
+        <span class="brand-tagline">One trustworthy team • Start to finish</span>
+      </span>
+    </a>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="about.html" data-page="about.html">About</a>
-        <a href="services.html" data-page="services.html">Services</a>
-        <a href="gallery.html" data-page="gallery.html">Gallery</a>
-        <a href="testimonials.html" data-page="testimonials.html">Testimonials</a>
-        <a href="contact.html" data-page="contact.html">Contact</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-        <a class="nav-icon" href="#" aria-label="Facebook (add link)">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z" fill="currentColor"/>
-          </svg>
+    <div class="header-right">
+      <div class="social" aria-label="Social links">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.3V12h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12z"/></svg>
         </a>
-
-        <a class="nav-icon" href="#" aria-label="Enter a testimonial (add link)">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 4h16v12H7l-3 3V4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M8 8h8M8 11h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm6.2-2.6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
         </a>
-
-        <span class="nav-star" aria-hidden="true" title="Accent">
-          <img src="images/star.png" alt="">
-        </span>
-      </nav>
+      </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="page">
-    <section class="section">
+<main>
+  <section class="page-head">
+    <div class="container">
       <div class="kicker">About</div>
-      <h1>Veteran &amp; Family Owned</h1>
-      <p class="small">Replace this copy with your real story as you’re ready.</p>
+      <h1 class="h1">A team you can trust inside your home.</h1>
+      <p class="lede">
+        Renovations By Michael is a family-owned and operated contracting business with 20+ years of experience,
+        serving homeowners across Pennsylvania and Delaware.
+      </p>
+    </div>
+  </section>
 
-      <div class="grid">
-        <div class="card span-8">
-          <h2 style="margin-top:0;">Our approach</h2>
-          <p>
-            We focus on thoughtful planning, clear communication, and quality craftsmanship.
-            Whether it’s a finished basement, bathroom refresh, or an addition, we treat every home with respect.
-          </p>
-          <p>
-            Add specifics here: service areas, what sets you apart, timelines, cleanliness, etc.
-          </p>
+  <section class="section">
+    <div class="container grid grid--2">
+      <div class="card">
+        <div class="media"><img src="images/house.png" alt="Project photo" /></div>
+      </div>
 
-          <div class="btn-row">
-            <a class="btn btn-red" href="contact.html#estimate">Request an Estimate</a>
-            <a class="btn btn-white" href="gallery.html">View Gallery</a>
+      <div class="card card-pad">
+        <h2 class="h2">Why clients keep calling us back</h2>
+        <p class="lede">
+          Our biggest value is simple: we’re full-service. That means your project isn’t a revolving door
+          of different crews and different timelines. It’s one trustworthy team doing first-class work from start to finish.
+        </p>
+
+        <div style="height:14px;"></div>
+
+        <div class="grid" style="gap:12px;">
+          <div class="card card-pad" style="box-shadow:none;">
+            <strong>Clear communication</strong>
+            <p style="margin:6px 0 0; color: var(--muted);">
+              We show up on schedule, communicate expectations, and stay aligned on deadlines.
+            </p>
+          </div>
+          <div class="card card-pad" style="box-shadow:none;">
+            <strong>Clean, intentional finishes</strong>
+            <p style="margin:6px 0 0; color: var(--muted);">
+              The final details matter—trim lines, transitions, symmetry, and durability.
+            </p>
+          </div>
+          <div class="card card-pad" style="box-shadow:none;">
+            <strong>Start-to-finish accountability</strong>
+            <p style="margin:6px 0 0; color: var(--muted);">
+              One team owns the result. That’s how projects stay consistent and stress stays low.
+            </p>
           </div>
         </div>
 
-        <div class="card span-4">
-          <div class="kicker">Quick facts</div>
-          <ul class="list">
-            <li>20+ years experience</li>
-            <li>DE &amp; PA service area</li>
-            <li>Finish work + remodels</li>
-          </ul>
-          <p class="small" style="margin-bottom:0;">
-            <span style="font-family: Allura, cursive; font-size: 1.35em;">Built with care.</span>
-          </p>
+        <div class="btn-row">
+          <a class="btn btn--red" href="contact.html">Request a Quote</a>
+          <a class="btn btn--blue" href="gallery.html">See Our Work</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="site-footer">
-      <img class="footer-logo" src="images/typo.png" alt="Renovations by Michael">
-      <p class="small">© <span id="year"></span> Renovations by Michael</p>
-    </footer>
-  </main>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">How we work</div>
+      <h2 class="h2">A process that keeps projects smooth</h2>
 
-  <button class="to-top" aria-label="Return to top">
-    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 5l7 7-2 2-5-5-5 5-2-2z" fill="currentColor"/>
-    </svg>
-  </button>
+      <div style="height:18px;"></div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+      <div class="grid grid--3">
+        <div class="card card-pad">
+          <h3>1) Plan</h3>
+          <p>We talk goals, scope, and options—then recommend a clear path forward.</p>
+        </div>
+        <div class="card card-pad">
+          <h3>2) Build</h3>
+          <p>Consistent scheduling, clean work areas, and steady progress you can see.</p>
+        </div>
+        <div class="card card-pad">
+          <h3>3) Finish</h3>
+          <p>Details and final touches that make the project look “complete,” not “good enough.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="images/typo.png" alt="Renovations By Michael wordmark" />
+      <div class="footer-note">Serving PA & DE • Full-service • One trustworthy team</div>
+    </div>
+    <div>
+      <div class="footer-title">Quick Links</div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">Contact</div>
+      <div class="footer-links">
+        <a href="tel:+1">Call: (###) ###-####</a>
+        <a href="mailto:renovationsbymichael@example.com">renovationsbymichael@example.com</a>
+        <a class="btn btn--red" href="contact.html" style="width:max-content;">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
