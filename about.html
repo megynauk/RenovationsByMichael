@@ -12,12 +12,24 @@
 <header class="site-header">
   <div class="container">
     <div class="header-inner">
-      <a class="brand" href="index.html">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-text">
-          <strong>Renovations by Michael</strong>
-          <span>PA & DE • Family-owned • Detail-driven</span>
-        </div>
+  <a class="brand" href="index.html" aria-label="Renovations by Michael Home">
+    <!-- BIG logo only (no words) -->
+    <img class="brand-logo" src="assets/img/logo.png" alt="Renovations by Michael logo">
+  </a>
+
+  <nav class="nav nav-tabs" data-nav aria-label="Primary">
+    <a href="index.html"><span class="tab-star" aria-hidden="true"></span>Home</a>
+    <a href="services.html"><span class="tab-star" aria-hidden="true"></span>Services</a>
+    <a href="projects.html"><span class="tab-star" aria-hidden="true"></span>Projects</a>
+    <a href="about.html"><span class="tab-star" aria-hidden="true"></span>About</a>
+    <a href="contact.html"><span class="tab-star" aria-hidden="true"></span>Contact</a>
+  </nav>
+
+  <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+  </button>
+</div>
+
       </a>
 
       <nav class="nav" data-nav aria-label="Primary">
@@ -35,15 +47,14 @@
     </div>
 
     <div class="mobile-panel" data-mobile-panel>
-      <div class="links" data-nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn burgundy" href="contact.html" style="justify-content:center;">Request an Estimate</a>
-      </div>
-    </div>
+  <div class="links" data-nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
   </div>
 </header>
 
@@ -164,46 +175,35 @@
 <footer class="footer">
   <div class="container">
     <div class="top">
-      <div class="cols">
-        <div>
-          <h3>Renovations by Michael</h3>
-          <p style="color:rgba(255,255,255,.75); margin-top:8px;">
-            Detail-driven remodeling across Pennsylvania and Delaware.
-          </p>
-        </div>
-        <div>
-          <h3>Explore</h3>
-          <div class="small" style="display:grid; gap:8px;">
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-        <div>
-          <h3>Services</h3>
-          <div class="small" style="display:grid; gap:8px;">
-            <a href="services.html#kitchens">Kitchens</a>
-            <a href="services.html#baths">Bathrooms</a>
-            <a href="services.html#basements">Basements</a>
-            <a href="services.html#decks">Decks</a>
-          </div>
-        </div>
-        <div>
-          <h3>Contact</h3>
-          <div class="small" style="display:grid; gap:8px;">
-            <span>Phone: (xxx) xxx-xxxx</span>
-            <span>Email: you@domain.com</span>
-            <a class="btn sand" href="contact.html" style="width:max-content;">Request an Estimate</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bottom">
-      <span>© <span id="year"></span> Renovations by Michael.</span>
-      <span>PA & DE</span>
+<div class="cols">
+  <div>
+    <img src="assets/img/logo.png" alt="Renovations by Michael logo" style="width:200px; max-width:100%; height:auto;">
+    <p style="color:rgba(255,255,255,.75); margin-top:10px;">
+      Detail-driven remodeling across PA • DE • NJ.
+    </p>
+  </div>
+
+  <div>
+    <h3>Navigation</h3>
+    <div class="small" style="display:grid; gap:10px; color:rgba(255,255,255,.78);">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://facebook.com/YOURPAGE" target="_blank" rel="noopener">Facebook</a>
     </div>
   </div>
+
+  <div>
+    <h3>Contact</h3>
+    <div class="small" style="display:grid; gap:10px; color:rgba(255,255,255,.78);">
+      <span>Phone: (xxx) xxx-xxxx</span>
+      <span>Email: you@domain.com</span>
+      <span>Serving PA • DE • NJ</span>
+    </div>
+  </div>
+</div>
 </footer>
 
 <script src="assets/js/site.js"></script>

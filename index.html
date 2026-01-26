@@ -12,12 +12,24 @@
 <header class="site-header">
   <div class="container">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Renovations by Michael Home">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-text">
-          <strong>Renovations by Michael</strong>
-          <span>PA & DE • Family-owned • Detail-driven</span>
-        </div>
+  <a class="brand" href="index.html" aria-label="Renovations by Michael Home">
+    <!-- BIG logo only (no words) -->
+    <img class="brand-logo" src="assets/img/logo.png" alt="Renovations by Michael logo">
+  </a>
+
+  <nav class="nav nav-tabs" data-nav aria-label="Primary">
+    <a href="index.html"><span class="tab-star" aria-hidden="true"></span>Home</a>
+    <a href="services.html"><span class="tab-star" aria-hidden="true"></span>Services</a>
+    <a href="projects.html"><span class="tab-star" aria-hidden="true"></span>Projects</a>
+    <a href="about.html"><span class="tab-star" aria-hidden="true"></span>About</a>
+    <a href="contact.html"><span class="tab-star" aria-hidden="true"></span>Contact</a>
+  </nav>
+
+  <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+  </button>
+</div>
+
       </a>
 
       <nav class="nav" data-nav aria-label="Primary">
@@ -37,20 +49,19 @@
     </div>
 
     <div class="mobile-panel" data-mobile-panel>
-      <div class="links" data-nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn burgundy" href="contact.html" style="justify-content:center;">Request an Estimate</a>
-      </div>
-    </div>
+  <div class="links" data-nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('assets/img/hero-home.jpg');"></div>
+  <div class="hero-bg" style="background-image:url('assets/img/house.png');"></div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-inner">
@@ -272,7 +283,7 @@
         <div>
           <h3>Contact</h3>
           <div class="small" style="display:grid; gap:8px; color:rgba(255,255,255,.78);">
-            <span>Serving PA & DE</span>
+            <span>Serving PA, DE, & NJ</span>
             <span>Phone: (xxx) xxx-xxxx</span>
             <span>Email: you@domain.com</span>
             <a class="btn sand" href="contact.html" style="width:max-content;">Request an Estimate</a>
