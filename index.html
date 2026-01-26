@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;600;800;900&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
   <script defer src="main.js"></script>
@@ -39,11 +39,12 @@
     </div>
   </header>
 
-  <main class="page-col">
-    <!-- Hero: minimal, squared, gradient -->
+  <main class="page">
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-bg" style="background-image:url('images/enclosure.png');"></div>
       <div class="hero-overlay"></div>
+
       <div class="hero-inner">
         <h1>RENOVATIONS BY MICHAEL</h1>
         <p>Veteran and family owned with over 20 years of experience.</p>
@@ -54,34 +55,33 @@
       </div>
     </section>
 
-    <!-- About teaser -->
+    <!-- HOME CARDS (small, informative, not gallery) -->
     <section class="section">
       <div class="section-head">
         <div>
-          <div class="kicker">About</div>
-          <h2>Quality workmanship, clear communication.</h2>
-          <p class="small">One reliable team — clean job sites, thoughtful planning, and strong finish work.</p>
+          <div class="kicker">Featured Work</div>
+          <h2>Craftsmanship you can see.</h2>
+          <p class="small">A few examples — visit Gallery for more photos.</p>
         </div>
-        <a class="btn btn-blue" href="about.html">About Us</a>
+        <a class="btn btn-blue" href="gallery.html">View Gallery</a>
       </div>
 
       <div class="grid">
-        <!-- small informative cards, not a gallery dump -->
         <div class="card span-4">
-          <div class="card-media"><img src="images/baywindow.png" alt="Window project"></div>
+          <div class="card-media"><img src="images/baywindow.png" alt="Bay window"></div>
           <div class="card-body">
             <h3>Windows & Doors</h3>
-            <p>Replacement, trim, flashing, and clean exterior integration — done the right way.</p>
-            <a class="btn btn-red" href="services.html#windows">See Details</a>
+            <p>Replacement, trim, and exterior integration with clean detailing.</p>
+            <a class="btn btn-red" href="services.html">Learn More</a>
           </div>
         </div>
 
         <div class="card span-4">
-          <div class="card-media"><img src="images/deck.png" alt="Deck project"></div>
+          <div class="card-media"><img src="images/deck.png" alt="Deck"></div>
           <div class="card-body">
             <h3>Decks & Outdoor</h3>
-            <p>New builds, repairs, framing, and upgrades that last — built with care.</p>
-            <a class="btn btn-blue" href="services.html#decks">See Details</a>
+            <p>New builds and upgrades designed for real use and longevity.</p>
+            <a class="btn btn-blue" href="services.html">Learn More</a>
           </div>
         </div>
 
@@ -89,8 +89,8 @@
           <div class="card-media"><img src="images/doorandoverhang.png" alt="Door and overhang"></div>
           <div class="card-body">
             <h3>Enclosures & Additions</h3>
-            <p>Improve flow and function with thoughtful planning and durable construction.</p>
-            <a class="btn btn-red" href="gallery.html">View Work</a>
+            <p>Thoughtful planning that improves flow, function, and finish.</p>
+            <a class="btn btn-red" href="contact.html#estimate">Get an Estimate</a>
           </div>
         </div>
       </div>
@@ -101,8 +101,8 @@
       <div class="section-head">
         <div>
           <div class="kicker">Testimonials</div>
-          <h2>Clients notice the difference.</h2>
-          <p class="small">A few highlights — read the full page for more.</p>
+          <h2>What clients say</h2>
+          <p class="small">Short highlights — read the full page anytime.</p>
         </div>
         <a class="btn btn-blue" href="testimonials.html">All Testimonials</a>
       </div>
@@ -123,12 +123,10 @@
       </div>
     </section>
 
-    <!-- Footer (polished) -->
+    <!-- Footer (inline, polished) -->
     <footer class="site-footer">
       <div class="footer-inner">
-        <div class="footer-brand">
-          <img src="images/typo.png" alt="Renovations by Michael">
-        </div>
+        <img class="footer-logo" src="images/typo.png" alt="Renovations by Michael">
 
         <nav class="footer-nav" aria-label="Footer">
           <a href="about.html">About</a>
@@ -142,7 +140,7 @@
           <a href="#" aria-label="Facebook (add link)">Facebook</a>
         </div>
 
-        <div class="footer-meta">© <span id="year"></span> Renovations by Michael • Delaware &amp; Pennsylvania</div>
+        <div class="footer-meta">© <span id="year"></span> Renovations by Michael</div>
       </div>
     </footer>
   </main>

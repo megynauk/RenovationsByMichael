@@ -35,32 +35,11 @@
     });
   }
 
-  // Active nav link
+  // Active nav
   const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll(".nav a[data-page]").forEach((a) => {
     if ((a.getAttribute("data-page") || "").toLowerCase() === current) {
       a.setAttribute("aria-current", "page");
     }
   });
-
-  // Simple lightbox for gallery
-  const lightbox = document.querySelector(".lightbox");
-  if (lightbox) {
-    const img = lightbox.querySelector("img");
-    const closeBtn = lightbox.querySelector(".lightbox-close");
-
-    document.querySelectorAll(".gallery-grid a").forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const href = link.getAttribute("href");
-        img.src = href;
-        lightbox.classList.add("open");
-      });
-    });
-
-    const close = () => lightbox.classList.remove("open");
-    closeBtn?.addEventListener("click", close);
-    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
-  }
 })();
