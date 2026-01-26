@@ -1,75 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | Renovations by Michael</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Request an estimate from Renovations by Michael. Serving PA & DE." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body>
+
 <header class="site-header">
-  <div class="header-inner">
-    <img src="images/roofline.png" alt="Renovations by Michael" class="logo" />
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html" class="active btn-primary">Contact</a>
-    </nav>
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Renovations by Michael</strong>
+          <span>PA & DE • Family-owned • Detail-driven</span>
+        </div>
+      </a>
+
+      <nav class="nav" data-nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn navy" href="contact.html">Request an Estimate</a>
+        <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      </div>
+    </div>
+
+    <div class="mobile-panel" data-mobile-panel>
+      <div class="links" data-nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn burgundy" href="contact.html" style="justify-content:center;">Request an Estimate</a>
+      </div>
+    </div>
   </div>
 </header>
 
-<main class="page">
-  <section class="page-hero">
-    <h1>Contact Us</h1>
-    <p>Let’s talk about your project.</p>
-  </section>
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('assets/img/hero-contact.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-card">
+        <div class="kicker"><span class="dot"></span> Contact</div>
+        <h1>Request an estimate</h1>
+        <p>Tell us what you’re planning and we’ll follow up with next steps.</p>
+        <div class="hero-actions">
+          <a class="btn burgundy" href="#form">Start Request</a>
+          <a class="btn secondary" href="projects.html">View Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section class="contact-layout">
+<section class="section" id="form">
+  <div class="container grid cols-2">
+    <div class="card pad">
+      <div class="kicker"><span class="dot"></span> Quick info</div>
+      <h2>What helps us quote accurately</h2>
+      <p class="small">If you can include these, estimates move faster:</p>
 
-    <div class="contact-info">
-      <h2>Renovations by Michael</h2>
-      <p>Serving Pennsylvania & Delaware</p>
+      <div class="list">
+        <div class="row">
+          <div class="icon" aria-hidden="true"></div>
+          <div><strong>Project type</strong><span>Kitchen, bath, deck, basement, doors/windows, etc.</span></div>
+        </div>
+        <div class="row">
+          <div class="icon" aria-hidden="true"></div>
+          <div><strong>Location + timeframe</strong><span>Where you are and when you want to start.</span></div>
+        </div>
+        <div class="row">
+          <div class="icon" aria-hidden="true"></div>
+          <div><strong>Photos (if possible)</strong><span>Even a few phone pics help a lot.</span></div>
+        </div>
+      </div>
 
-      <p><strong>Phone:</strong> <a href="tel:1234567890">(123) 456-7890</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@renovationsbymichael.com">info@renovationsbymichael.com</a></p>
-
-      <p class="contact-note">
-        We return calls promptly and pride ourselves on clear communication from start to finish.
-      </p>
+      <div class="divider"></div>
+      <div class="badge">Serving Pennsylvania & Delaware</div>
     </div>
 
-    <form class="contact-form" action="mailto:info@renovationsbymichael.com" method="post" enctype="text/plain">
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
+    <div class="card pad">
+      <div class="kicker"><span class="dot"></span> Estimate request</div>
+      <h2>Send details</h2>
 
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
+      <!-- Replace action with your form handler (Formspree, Netlify Forms, etc.) -->
+      <form class="form" action="#" method="post">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="type">Project Type</label>
+          <input id="type" name="type" placeholder="Kitchen remodel, deck rebuild, basement finish..." />
+        </div>
+        <div class="field">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" placeholder="What are you looking to change? Any deadlines or must-haves?"></textarea>
+        </div>
+        <button class="btn burgundy" type="submit">Send Request</button>
+        <p class="small">You can also call or email us directly. Response time: typically 1–2 business days.</p>
+      </form>
+    </div>
+  </div>
+</section>
 
-      <label>
-        Phone
-        <input type="tel" name="phone" />
-      </label>
-
-      <label>
-        Tell us about your project
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
-
-  </section>
-</main>
-
-<footer class="site-footer">
-  <img src="images/lettermark.png" alt="Renovations by Michael" />
-  <p>© Renovations by Michael</p>
+<footer class="footer">
+  <div class="container">
+    <div class="top">
+      <div class="cols">
+        <div>
+          <h3>Renovations by Michael</h3>
+          <p style="color:rgba(255,255,255,.75); margin-top:8px;">Detail-driven remodeling across PA & DE.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <div class="small" style="display:grid; gap:8px;">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+          </div>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <div class="small" style="display:grid; gap:8px;">
+            <span>Phone: (xxx) xxx-xxxx</span>
+            <span>Email: you@domain.com</span>
+            <span>Service area: PA & DE</span>
+          </div>
+        </div>
+        <div>
+          <h3>Estimate</h3>
+          <div class="small" style="display:grid; gap:8px;">
+            <a class="btn sand" href="#form" style="width:max-content;">Request an Estimate</a>
+            <span class="small" style="color:rgba(255,255,255,.72);">Include photos if you can.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© <span id="year"></span> Renovations by Michael.</span>
+      <span>PA & DE</span>
+    </div>
+  </div>
 </footer>
+
+<script src="assets/js/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
