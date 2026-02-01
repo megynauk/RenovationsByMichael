@@ -1,66 +1,53 @@
-(function(){
-  // Mobile nav
-  const burger = document.querySelector('[data-burger]');
-  const panel = document.querySelector('[data-mobile-panel]');
+(function () {
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-  if (burger && panel){
-    burger.addEventListener('click', () => {
-      const open = panel.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  // Mobile nav toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("site-nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    panel.addEventListener('click', (e) => {
-      const a = e.target.closest('a');
-      if (a){
-        panel.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-      }
+    // Close menu when clicking a link (mobile)
+    nav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
-  // Active nav link
-  const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  document.querySelectorAll('[data-nav] a').forEach(a => {
-    const href = (a.getAttribute('href') || '').toLowerCase();
-    if (href === path) a.classList.add('active');
-  });
+  // Active section highlighting (IntersectionObserver)
+  const links = Array.from(document.querySelectorAll(".nav-link"));
+  const sections = links
+    .map(l => document.querySelector(l.getAttribute("href")))
+    .filter(Boolean);
 
-  // Lightbox (projects)
-  const lb = document.querySelector('[data-lightbox]');
-  const lbImg = document.querySelector('[data-lightbox-img]');
-  const lbMeta = document.querySelector('[data-lightbox-meta]');
-  const lbClose = document.querySelector('[data-lightbox-close]');
+  const setActive = (id) => {
+    links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === `#${id}`));
+  };
 
-  if (lb && lbImg && lbClose){
-    document.addEventListener('click', (e) => {
-      const thumb = e.target.closest('[data-lightbox-open]');
-      if (!thumb) return;
+  const io = new IntersectionObserver((entries) => {
+    // choose the most visible intersecting section
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible && visible.target && visible.target.id) setActive(visible.target.id);
+  }, { threshold: [0.25, 0.5, 0.75] });
 
-      const src = thumb.getAttribute('data-src');
-      const label = thumb.getAttribute('data-label') || 'Project Photo';
-      if (!src) return;
+  sections.forEach(s => io.observe(s));
 
-      lbImg.src = src;
-      lbMeta.textContent = label;
-      lb.classList.add('open');
-      lb.setAttribute('aria-hidden', 'false');
-    });
-
-    const close = () => {
-      lb.classList.remove('open');
-      lb.setAttribute('aria-hidden', 'true');
-      lbImg.src = '';
-      lbMeta.textContent = '';
-    };
-
-    lbClose.addEventListener('click', close);
-
-    lb.addEventListener('click', (e) => {
-      if (e.target === lb) close();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lb.classList.contains('open')) close();
+  // Fake form submit (so it doesn't "break" on GitHub Pages)
+  const form = document.getElementById("estimateForm");
+  const note = document.getElementById("formNote");
+  if (form && note) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      note.textContent = "Thanks — your request is ready. Next step: connect this form to email or a form service.";
+      form.reset();
     });
   }
 })();

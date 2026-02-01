@@ -2,182 +2,385 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Renovations by Michael | PA • DE • NJ</title>
-  <meta name="description" content="Renovations done right. Remodeling and home improvement across PA, DE, and NJ." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Renovations by Michael — high-quality home improvements, repairs, and remodels. One team from start to finish." />
+  <title>Renovations by Michael</title>
 
-<header class="site-header">
-  <div class="container">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Renovations by Michael Home">
-        <img src="assets/img/RM.png" alt="Renovations by Michael logo">
+  <link rel="preload" as="image" href="assets/images/house.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Renovations by Michael - Home">
+        <!-- If you have a logo, drop it in /assets/images/logo.png -->
+        <img class="brand-logo" src="assets/images/logo.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+        <span class="brand-fallback" style="display:none;">
+          <span class="brand-mark" aria-hidden="true">★</span>
+          <span class="brand-name">Renovations by Michael</span>
+        </span>
       </a>
 
-      <nav class="nav" data-nav aria-label="Primary">
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="reviews.html">Reviews</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#process">Process</a>
+        <a class="nav-link" href="#reviews">Reviews</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
 
-      <div class="header-right">
-        <a class="btn burgundy" href="contact.html">Contact</a>
-        <img src="assets/img/star.png" class="header-star" alt="" aria-hidden="true">
-        <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-        </button>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="tel:+1-000-000-0000" aria-label="Call Renovations by Michael">
+          Call
+        </a>
+        <a class="btn btn-primary" href="#contact">
+          Get an Estimate
+        </a>
       </div>
     </div>
+  </header>
 
-    <div class="mobile-panel" data-mobile-panel>
-      <div class="links" data-nav>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="reviews.html">Reviews</a>
-        <a class="contact" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<section class="hero" aria-label="Hero">
-  <div class="hero-bg" style="background-image:url('assets/img/house.png');"></div>
-  <div class="hero-overlay"></div>
-  <div class="container hero-inner">
-    <div class="hero-left">
-      <h1>Renovations<br>done right.</h1>
-      <p>Detail-driven remodeling & home improvement across <strong>PA • DE • NJ</strong>.</p>
-      <a class="btn secondary" href="projects.html">View Our Work</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="panel pad">
-      <div class="grid cols-3">
-        <div class="tile">
-          <div class="img"><img src="assets/img/addition.png" alt="Additions"></div>
-          <div class="body">
-            <h3>Additions</h3>
-            <p class="small">Extra space that looks like it always belonged.</p>
-          </div>
-          <div class="actions">
-            <a class="btn navy" href="services.html#additions">Learn More</a>
-          </div>
-        </div>
-
-        <div class="tile">
-          <div class="img"><img src="assets/img/basements.png" alt="Basements"></div>
-          <div class="body">
-            <h3>Basements</h3>
-            <p class="small">Finished spaces built for comfort and function.</p>
-          </div>
-          <div class="actions">
-            <a class="btn navy" href="services.html#basements">Learn More</a>
-          </div>
-        </div>
-
-        <div class="tile">
-          <div class="img"><img src="assets/img/bathroom.png" alt="Bathrooms"></div>
-          <div class="body">
-            <h3>Bathrooms</h3>
-            <p class="small">Tile, fixtures, trim, and clean finishing.</p>
-          </div>
-          <div class="actions">
-            <a class="btn burgundy" href="services.html#baths">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="panel pad">
-      <div class="grid cols-2" style="align-items:center;">
-        <div class="media r16x9">
-          <img src="assets/img/enclosure.png" alt="Project example">
-        </div>
-        <div>
-          <h2>Built clean. Finished clean.</h2>
-          <p>
-            We keep the process straightforward: clear scope, steady updates, and careful detail work.
-            The goal is the same every time—work that feels solid and looks intentional.
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-star" aria-hidden="true">★</span>
+            Veteran-owned • Clean work • Clear communication
           </p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn burgundy" href="contact.html">Request an Estimate</a>
-            <a class="btn secondary" href="services.html">See Services</a>
+          <h1>High-quality home improvement — without the chaos.</h1>
+          <p class="lead">
+            Renovations, repairs, and upgrades done the right way. One team from start to finish — and a home you’ll feel proud of.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Request an Estimate</a>
+            <a class="btn btn-ghost" href="#projects">See Recent Work</a>
+          </div>
+
+          <ul class="trust-list" aria-label="Highlights">
+            <li><span class="dot" aria-hidden="true">★</span> Detailed scope & timeline</li>
+            <li><span class="dot" aria-hidden="true">★</span> Respectful crew & clean job sites</li>
+            <li><span class="dot" aria-hidden="true">★</span> Finish work that lasts</li>
+          </ul>
+
+          <div class="service-area">
+            <span class="badge">Serving</span>
+            <span>Delaware • Coastal Maryland • South Jersey (NJ)</span>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-label="Featured project photo">
+          <div class="hero-image-frame">
+            <img src="assets/images/house.png" alt="Renovation work example" loading="eager" />
+          </div>
+
+          <div class="hero-card" role="note" aria-label="Quick promise">
+            <div class="hero-card-row">
+              <span class="mini-star" aria-hidden="true">★</span>
+              <div>
+                <strong>Simple promise:</strong>
+                <p>We show up, communicate clearly, and do clean work you can trust.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section">
-  <div class="container">
-    <div class="panel pad">
-      <div class="grid cols-3">
-        <div class="tile">
-          <div class="img"><img src="assets/img/deck.png" alt="Decks"></div>
-          <div class="body">
-            <h3>Decks</h3>
-            <p class="small">New builds, repairs, stairs, railings.</p>
-          </div>
-          <div class="actions"><a class="btn navy" href="services.html#decks">Learn More</a></div>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Services</h2>
+          <p>Focused, high-impact improvements — with craftsmanship and accountability.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Decks & Outdoor Builds</h3>
+            <p>New decks, repairs, railings, steps, and outdoor upgrades built to code and built to last.</p>
+            <ul class="bullets">
+              <li>Deck rebuilds & repairs</li>
+              <li>Railings, stairs, skirting</li>
+              <li>Sheds & outdoor structures</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Windows & Doors</h3>
+            <p>Replacements installed correctly — weatherproofing, trim, and finish work that looks sharp.</p>
+            <ul class="bullets">
+              <li>Entry doors & sliders</li>
+              <li>Window replacements</li>
+              <li>Interior/exterior trim</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Interiors & Remodel</h3>
+            <p>Drywall, flooring, bathrooms, finished basements — clean lines and professional results.</p>
+            <ul class="bullets">
+              <li>Drywall & paint prep</li>
+              <li>Flooring & finish carpentry</li>
+              <li>Bathrooms & basements</li>
+            </ul>
+          </article>
         </div>
-        <div class="tile">
-          <div class="img"><img src="assets/img/windowdoor.png" alt="Doors and windows"></div>
-          <div class="body">
-            <h3>Doors & Windows</h3>
-            <p class="small">Replacement, trim, sealing, fit and finish.</p>
-          </div>
-          <div class="actions"><a class="btn navy" href="services.html#doors-windows">Learn More</a></div>
-        </div>
-        <div class="tile">
-          <div class="img"><img src="assets/img/doorandoverhang.png" alt="Overhangs"></div>
-          <div class="body">
-            <h3>Overhangs</h3>
-            <p class="small">Protection + curb appeal over entries.</p>
-          </div>
-          <div class="actions"><a class="btn navy" href="services.html#overhangs">Learn More</a></div>
+
+        <div class="section-note">
+          <span class="badge badge-soft">Not sure?</span>
+          <p>
+            Tell us what you’re trying to solve. We’ll suggest options that fit your budget and timeline.
+          </p>
+          <a class="btn btn-secondary" href="#contact">Ask for a Quote</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <img class="footer-logo" src="assets/img/roofline.png" alt="Renovations by Michael">
-        <p style="margin-top:10px;">Serving <strong>PA • DE • NJ</strong></p>
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Recent work</h2>
+          <p>Quick snapshots — more photo sets can be added as you upload them.</p>
+        </header>
+
+        <div class="gallery" aria-label="Project gallery">
+          <!-- Replace placeholders with your real images -->
+          <figure class="gallery-item">
+            <div class="ph" aria-hidden="true">Photo</div>
+            <figcaption>Deck rebuild + railings</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="ph" aria-hidden="true">Photo</div>
+            <figcaption>Door replacement + trim</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="ph" aria-hidden="true">Photo</div>
+            <figcaption>Shed build</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="ph" aria-hidden="true">Photo</div>
+            <figcaption>Drywall + finish work</figcaption>
+          </figure>
+        </div>
+
+        <div class="callout">
+          <div class="callout-inner">
+            <div>
+              <h3>Want your project featured here?</h3>
+              <p>We can build a clean “before/after” section once you drop your best photos into /assets/images.</p>
+            </div>
+            <a class="btn btn-primary" href="#contact">Start a Project</a>
+          </div>
+        </div>
       </div>
-      <div class="footer-links" aria-label="Footer navigation">
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://facebook.com/YOURPAGE" target="_blank" rel="noopener">Facebook</a>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>How it works</h2>
+          <p>No mystery — just a clear, professional process.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Quick call or message</h3>
+              <p>Tell us what you need. We’ll ask a few questions and confirm the service area.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Estimate + scope</h3>
+              <p>You’ll get a clear scope and realistic timeline. No vague “we’ll see.”</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Build day</h3>
+              <p>Respectful crew, tidy site, and steady communication until it’s done right.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>What people say</h2>
+          <p>Real feedback from real jobs.</p>
+        </header>
+
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>
+              “Michael and crew—our sunroom looks terrific… The shed is big enough… Joe and Meg added the final touches…”
+            </blockquote>
+            <figcaption>— Customer testimonial</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote>
+              “Nice clean work, dedicated to satisfy. He's definitely the guy to call.”
+            </blockquote>
+            <figcaption>— Local homeowner</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote>
+              “Always arrives on schedule and communicates expectations and deadlines throughout the entire project.”
+            </blockquote>
+            <figcaption>— Repeat customer</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Request an estimate</h2>
+          <p>Send the basics and we’ll follow up fast. (This form is front-end only until you connect it.)</p>
+        </header>
+
+        <div class="contact-grid">
+          <form class="form card" id="estimateForm">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" inputmode="tel" autocomplete="tel" required />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="location">City / State</label>
+                <input id="location" name="location" placeholder="e.g., Georgetown, DE" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Deck / Outdoor</option>
+                <option>Windows / Doors</option>
+                <option>Interior Remodel</option>
+                <option>Repair / Punch list</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="details">Project details</label>
+              <textarea id="details" name="details" rows="5" placeholder="Tell us what you want done, rough size, and any timeline goals."></textarea>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="timeline">Ideal timeline</label>
+                <select id="timeline" name="timeline">
+                  <option>ASAP</option>
+                  <option>1–4 weeks</option>
+                  <option>1–3 months</option>
+                  <option>3+ months</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="contactPref">Best contact method</label>
+                <select id="contactPref" name="contactPref">
+                  <option>Call</option>
+                  <option>Text</option>
+                  <option>Email</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Send Request</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-side">
+            <div class="side-card">
+              <h3>Direct contact</h3>
+              <p class="muted">Prefer to call or text? No problem.</p>
+              <div class="side-actions">
+                <a class="btn btn-secondary" href="tel:+1-000-000-0000">Call</a>
+                <a class="btn btn-ghost" href="sms:+1-000-000-0000">Text</a>
+              </div>
+              <hr class="hr" />
+              <p><strong>Service area:</strong> Delaware • Coastal Maryland • South Jersey (NJ)</p>
+              <p class="muted small">Licensed/insured line can go here if applicable.</p>
+            </div>
+
+            <div class="side-card soft">
+              <h3>Next step (easy)</h3>
+              <p class="muted">If you have photos, include them when we reply — it speeds up estimating.</p>
+              <ul class="bullets">
+                <li>2–4 photos (wide + close-up)</li>
+                <li>Approx. size or measurements</li>
+                <li>Any materials you like</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">★</span>
+        <div>
+          <strong>Renovations by Michael</strong>
+          <div class="muted small">Clean work • Clear communication</div>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a class="footer-social" href="#" aria-label="Facebook (replace # with your link)">Facebook</a>
+      </nav>
+
+      <div class="footer-meta muted small">
+        <div>© <span id="year"></span> Renovations by Michael</div>
+        <div><a href="#top">Back to top</a></div>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Renovations by Michael.</span>
-      <span>PA • DE • NJ</span>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/js/site.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="main.js"></script>
 </body>
 </html>
