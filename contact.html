@@ -4,174 +4,117 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | Renovations by Michael</title>
-  <meta name="description" content="Request an estimate from Renovations by Michael. Serving PA, DE & NJ." />
+  <meta name="description" content="Request an estimate from Renovations by Michael." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-   <div class="header-inner">
-  <a class="brand" href="index.html" aria-label="Renovations by Michael Home">
-    <!-- BIG logo only (no words) -->
-    <img class="brand-logo" src="assets/img/logo.png" alt="Renovations by Michael logo">
-  </a>
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="assets/img/RM.png" alt="Renovations by Michael logo"></a>
 
-  <nav class="nav nav-tabs" data-nav aria-label="Primary">
-    <a href="index.html"><span class="tab-star" aria-hidden="true"></span>Home</a>
-    <a href="services.html"><span class="tab-star" aria-hidden="true"></span>Services</a>
-    <a href="projects.html"><span class="tab-star" aria-hidden="true"></span>Projects</a>
-    <a href="about.html"><span class="tab-star" aria-hidden="true"></span>About</a>
-    <a href="contact.html"><span class="tab-star" aria-hidden="true"></span>Contact</a>
-  </nav>
-
-  <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false">
-    <span aria-hidden="true"></span>
-  </button>
-</div>
-
-      </a>
-
-      <nav class="nav" data-nav aria-label="Primary">
-        <a href="index.html">Home</a>
+      <nav class="nav" data-nav>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="reviews.html">Reviews</a>
       </nav>
 
-      <div class="header-cta">
-        <a class="btn navy" href="contact.html">Request an Estimate</a>
+      <div class="header-right">
+        <a class="btn burgundy" href="contact.html">Contact</a>
+        <img src="assets/img/star.png" class="header-star" alt="" aria-hidden="true">
         <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false"><span aria-hidden="true"></span></button>
       </div>
     </div>
 
     <div class="mobile-panel" data-mobile-panel>
-  <div class="links" data-nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
+      <div class="links" data-nav>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a class="contact" href="contact.html">Contact</a>
+      </div>
+    </div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('assets/img/hero-contact.jpg');"></div>
+  <div class="hero-bg" style="background-image:url('assets/img/shed.png');"></div>
   <div class="hero-overlay"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-card">
-        <div class="kicker"><span class="dot"></span> Contact</div>
-        <h1>Request an estimate</h1>
-        <p>Tell us what you’re planning and we’ll follow up with next steps.</p>
-        <div class="hero-actions">
-          <a class="btn burgundy" href="#form">Start Request</a>
-          <a class="btn secondary" href="projects.html">View Projects</a>
-        </div>
-      </div>
+  <div class="container hero-inner">
+    <div class="hero-left">
+      <h1>Contact</h1>
+      <p>Tell us what you’re planning. We serve <strong>PA • DE • NJ</strong>.</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="form">
-  <div class="container grid cols-2">
-    <div class="card pad">
-      <div class="kicker"><span class="dot"></span> Quick info</div>
-      <h2>What helps us quote accurately</h2>
-      <p class="small">If you can include these, estimates move faster:</p>
+<section class="section">
+  <div class="container">
+    <div class="panel pad">
+      <div class="grid cols-2" style="align-items:start;">
+        <div>
+          <h2>Request an estimate</h2>
+          <p class="small">Photos help. Even a few phone pics is enough to start.</p>
 
-      <div class="list">
-        <div class="row">
-          <div class="icon" aria-hidden="true"></div>
-          <div><strong>Project type</strong><span>Kitchen, bath, deck, basement, doors/windows, etc.</span></div>
+          <div class="divider"></div>
+
+          <p><strong>Service Area:</strong> PA • DE • NJ</p>
+          <p><strong>Phone:</strong> (xxx) xxx-xxxx<br><strong>Email:</strong> you@domain.com</p>
         </div>
-        <div class="row">
-          <div class="icon" aria-hidden="true"></div>
-          <div><strong>Location + timeframe</strong><span>Where you are and when you want to start.</span></div>
-        </div>
-        <div class="row">
-          <div class="icon" aria-hidden="true"></div>
-          <div><strong>Photos (if possible)</strong><span>Even a few phone pics help a lot.</span></div>
+
+        <div>
+          <form class="form" action="#" method="post">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="type">Project Type</label>
+              <input id="type" name="type" placeholder="Bathroom remodel, deck rebuild, door replacement...">
+            </div>
+            <div class="field">
+              <label for="message">Details</label>
+              <textarea id="message" name="message" placeholder="Describe your project, timeframe, and any must-haves."></textarea>
+            </div>
+            <button class="btn burgundy" type="submit">Send</button>
+            <p class="small">Replace the form action later (Formspree/Netlify/etc.).</p>
+          </form>
         </div>
       </div>
-
-      <div class="divider"></div>
-      <div class="badge">Serving Pennsylvania, Delaware, & New Jersey</div>
-    </div>
-
-    <div class="card pad">
-      <div class="kicker"><span class="dot"></span> Estimate request</div>
-      <h2>Send details</h2>
-
-      <!-- Replace action with your form handler (Formspree, Netlify Forms, etc.) -->
-      <form class="form" action="#" method="post">
-        <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="name" autocomplete="name" required />
-        </div>
-        <div class="field">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" autocomplete="tel" />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
-        </div>
-        <div class="field">
-          <label for="type">Project Type</label>
-          <input id="type" name="type" placeholder="Kitchen remodel, deck rebuild, basement finish..." />
-        </div>
-        <div class="field">
-          <label for="message">Project Details</label>
-          <textarea id="message" name="message" placeholder="What are you looking to change? Any deadlines or must-haves?"></textarea>
-        </div>
-        <button class="btn burgundy" type="submit">Send Request</button>
-        <p class="small">You can also call or email us directly. Response time: typically 1–2 business days.</p>
-      </form>
     </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <div class="top">
-      <div class="cols">
-        <div>
-          <h3>Renovations by Michael</h3>
-          <p style="color:rgba(255,255,255,.75); margin-top:8px;">Detail-driven remodeling across PA & DE.</p>
-        </div>
-        <div>
-          <h3>Explore</h3>
-          <div class="small" style="display:grid; gap:8px;">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-          </div>
-        </div>
-        <div>
-          <h3>Contact</h3>
-          <div class="small" style="display:grid; gap:8px;">
-            <span>Phone: (xxx) xxx-xxxx</span>
-            <span>Email: you@domain.com</span>
-            <span>Service area: PA & DE</span>
-          </div>
-        </div>
-        <div>
-          <h3>Estimate</h3>
-          <div class="small" style="display:grid; gap:8px;">
-            <a class="btn sand" href="#form" style="width:max-content;">Request an Estimate</a>
-            <span class="small" style="color:rgba(255,255,255,.72);">Include photos if you can.</span>
-          </div>
-        </div>
+    <div class="footer-top">
+      <div>
+        <img class="footer-logo" src="assets/img/roofline.png" alt="Renovations by Michael">
+        <p style="margin-top:10px;">Serving <strong>PA • DE • NJ</strong></p>
+      </div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://facebook.com/YOURPAGE" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
-    <div class="bottom">
+    <div class="footer-bottom">
       <span>© <span id="year"></span> Renovations by Michael.</span>
-      <span>PA & DE</span>
+      <span>PA • DE • NJ</span>
     </div>
   </div>
 </footer>

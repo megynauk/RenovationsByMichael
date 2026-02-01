@@ -1,8 +1,3 @@
-// =========================
-// Renovations by Michael
-// Minimal, reliable JS
-// =========================
-
 (function(){
   // Mobile nav
   const burger = document.querySelector('[data-burger]');
@@ -14,7 +9,6 @@
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
-    // Close panel when you click a link
     panel.addEventListener('click', (e) => {
       const a = e.target.closest('a');
       if (a){
@@ -31,7 +25,7 @@
     if (href === path) a.classList.add('active');
   });
 
-  // Gallery Lightbox
+  // Lightbox (projects)
   const lb = document.querySelector('[data-lightbox]');
   const lbImg = document.querySelector('[data-lightbox-img]');
   const lbMeta = document.querySelector('[data-lightbox-meta]');
