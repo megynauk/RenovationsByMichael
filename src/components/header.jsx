@@ -1,20 +1,37 @@
-import React from "react";
-import Header from "./header.jsx";
-import Footer from "./Footer.jsx";
+import { NavLink } from "react-router-dom";
 
-export default function Shell({ children }) {
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61559801225031";
+
+export default function Header() {
   return (
-    <div className="outer">
-      <a className="skip" href="#content">Skip to content</a>
-      <Header />
-      <div className="column">
-        <div className="columnTopPad" />
-        <main id="content" className="main">
-        </main>
-          {children}
-        <div className="columnBottomPad" />
+    <header className="topbar">
+      <div className="topbarInner">
+        <a className="brand" href="#/" aria-label="Home">
+          <img className="brandLogo" src="images/roofline.png" alt="Renovations by Michael" />
+        </a>
+
+        <nav className="tabs" aria-label="Primary">
+          <NavLink to="/" end className={({ isActive }) => (isActive ? "tab active" : "tab")}>
+            Home
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? "tab active" : "tab")}>
+            About
+          </NavLink>
+          <NavLink to="/services" className={({ isActive }) => (isActive ? "tab active" : "tab")}>
+            Services
+          </NavLink>
+          <NavLink to="/gallery" className={({ isActive }) => (isActive ? "tab active" : "tab")}>
+          Gallery
+          </NavLink>
+          <NavLink to="/testimonials" className={({ isActive }) => (isActive ? "tab active" : "tab")}>
+            Testimonials
+          </NavLink>
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? "tab active" : "tab")}>
+            Contact
+          </NavLink>
+
+        </nav>
       </div>
-      <Footer />
-    </div>
+    </header>
   );
 }
