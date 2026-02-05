@@ -16,4 +16,10 @@ function Root() {
   );
 }
 
+root.render(
+  <HashRouter>
+    <App />
+  </HashRouter>
+);
+
 ReactDOM.createRoot(document.getElementById("root")).render(<Root />);
