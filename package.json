@@ -1,4 +1,5 @@
 {
+  "homepage": "https://renovationsbymichael.com",
   "name": "renovations-by-michael",
   "private": true,
   "version": "1.0.0",
@@ -7,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
@@ -17,7 +19,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "pages": "^0.0.16",
     "vite": "^5.4.2"
   }
